@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/kategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eksterior"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/textsize_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/urutan_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eksterior"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_medium"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail1"
+                android:layout_margin="@dimen/textsize_small"
+                android:text="Ketersediaan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_medium"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/textsize_medium"
+                android:layout_marginRight="@dimen/textsize_medium">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/r1c1_app"
+                        android:layout_width="@dimen/img_width_height"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:text="Exist, Good" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/r1c2_app"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center_vertical"
+                        android:text="Not exist" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/r2c1_app"
+                        android:layout_width="@dimen/img_width_height"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="Exist, Not Good" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/r2c2_app"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="N/A" />
+                </LinearLayout>
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/im_approve"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/nav_header_height"
+                android:layout_marginBottom="@dimen/textsize_small"
+                android:layout_marginLeft="@dimen/textsize_medium"
+                android:layout_marginRight="@dimen/textsize_medium"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:text="Problem Identification"
+                android:textColor="@color/black"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/ed_pi_app"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:lines="3"
+                android:padding="@dimen/cp_padding_edittext"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:text="Corrective Action"
+                android:textColor="@color/black"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/ed_ca_app"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:lines="3"
+                android:padding="@dimen/cp_padding_edittext"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium" />
+
+            <TextView
+                android:id="@+id/textDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:text="Deadline"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/ed_deadline"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:background="@drawable/edittext_bg"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/hint_date"
+                android:textColor="@color/black_1000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:text="Status Pica"
+                android:textColor="@color/black"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/sp_status_pica_approve"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cp_spinner_high"
+                    android:layout_alignParentTop="true"
+                    android:padding="@dimen/cp_padding_edittext"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/new_deadline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textNewDeadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cp_margin_form"
+                    android:layout_marginRight="@dimen/cp_margin_form"
+                    android:layout_marginTop="@dimen/cp_margin_form"
+                    android:text="New Deadline"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_new_deadline"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/cp_margin_form"
+                    android:layout_marginRight="@dimen/cp_margin_form"
+                    android:layout_marginTop="@dimen/cp_margin_form"
+                    android:background="@drawable/edittext_bg"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="@string/hint_date"
+                    android:textColor="@color/black_1000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reason"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textReason"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cp_margin_form"
+                    android:layout_marginRight="@dimen/cp_margin_form"
+                    android:layout_marginTop="@dimen/cp_margin_form"
+                    android:text="Reason"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/cp_textsize_small" />
+
+                <EditText
+                    android:id="@+id/ed_reason"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cp_margin_form"
+                    android:layout_marginRight="@dimen/cp_margin_form"
+                    android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                    android:background="@drawable/edittext_bg"
+                    android:lines="3"
+                    android:padding="@dimen/cp_padding_edittext"
+                    android:textColor="@color/black_1000"
+                    android:textSize="@dimen/cp_textsize_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/notes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textNotes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cp_margin_form"
+                    android:layout_marginRight="@dimen/cp_margin_form"
+                    android:layout_marginTop="@dimen/cp_margin_form"
+                    android:text="Notes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/cp_textsize_small" />
+
+                <EditText
+                    android:id="@+id/ed_notes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cp_margin_form"
+                    android:layout_marginRight="@dimen/cp_margin_form"
+                    android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                    android:background="@drawable/edittext_bg"
+                    android:lines="3"
+                    android:padding="@dimen/cp_padding_edittext"
+                    android:textColor="@color/black_1000"
+                    android:textSize="@dimen/cp_textsize_medium" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_save_approve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/cp_textsize_medium"
+                android:layout_marginLeft="@dimen/cp_padding_edittext"
+                android:layout_marginRight="@dimen/cp_padding_edittext"
+                android:layout_marginTop="@dimen/cp_textsize_medium"
+                android:background="@drawable/round_shape_button"
+                android:text="APPROVE"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

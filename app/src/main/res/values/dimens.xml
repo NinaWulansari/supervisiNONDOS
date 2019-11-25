@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    <dimen name="nav_header_vertical_spacing">10dp</dimen>
+    <dimen name="nav_header_height">100dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="profile_width">80dp</dimen>
+    <dimen name="profile_height">80dp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="design_fab_size_mini" tools:override="true">24dp</dimen>
+    <dimen name="design_fab_content_size" tools:override="true">48dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+
+    <!--customer prospect-->
+
+    <dimen name="textsize_big">20sp</dimen>
+    <dimen name="textsize_medium">14sp</dimen>
+    <dimen name="textsize_small">12sp</dimen>
+    <dimen name="alp_size">40</dimen>
+    <dimen name="padding_alamat">5dp</dimen>
+    <dimen name="padding_lovsearch">4dp</dimen>
+    <dimen name="padding_edittext">10dp</dimen>
+    <dimen name="margin_form">15dp</dimen>
+    <dimen name="spinner_high">40dp</dimen>
+    <dimen name="margin_top_edittext">5dp</dimen>
+    <dimen name="width_0">0dp</dimen>
+    <dimen name="relative_margin">20dp</dimen>
+
+
+    <dimen name="list_item_height">48dp</dimen>
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="list_item_left_margin">72dp</dimen>
+
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">150dp</dimen>
+    <dimen name="img_width">200dp</dimen>
+    <dimen name="slide_title">30dp</dimen>
+    <dimen name="margin_top">-32dp</dimen>
+    <dimen name="slide_desc">16dp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+    <dimen name="approve_padding">2dp</dimen>
+    <dimen name="button_margin">250dp</dimen>
+
+</resources>

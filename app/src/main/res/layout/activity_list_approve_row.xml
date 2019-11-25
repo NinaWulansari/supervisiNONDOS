@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_lovsearch">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/approve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/padding_alamat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingEnd="10dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chk_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:theme="@style/MyCheckBox"/>
+
+                    <ImageView
+                        android:id="@+id/img_done"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/ic_checked"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_plan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/ic_calendar"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_res"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/ic_time_passing"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_kategori_app"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/cp_padding_alamat"
+                            android:text="Approval Layout New VinCi "
+                            android:textColor="@color/grey_700"
+                            android:textSize="@dimen/cp_textsize_small"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/text_question_app"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/cp_padding_alamat"
+                            android:text="Eksterior"
+                            android:textColor="@color/grey_700"
+                            android:textSize="@dimen/cp_textsize_little" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_status"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tglSupervisi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="Deadline"
+                            android:textColor="@color/grayDark"
+                            android:textSize="@dimen/cp_textsize_little"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/deadline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:minWidth="50dp"
+                            android:text="Deadline"
+                            android:textColor="@color/grayDark"
+                            android:textSize="@dimen/cp_textsize_little"
+                            android:textStyle="italic" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

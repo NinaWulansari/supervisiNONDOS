@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wahanaartha.supervisionline">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="androidx.multidex.MultiDexApplication" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.DispatcherActivity">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity android:name=".Activities.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Activities.NavigationDrawer"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".Activities.KategoriActivity" />
+        <!--<activity android:name=".Activities.QuestionActivity"/>-->
+        <activity android:name=".Activities.WelcomeActivity"/>
+        <activity android:name=".Activities.MainActivitySpv"/>
+        <activity android:name=".Activities.MainActivityAdmin"/>
+        <activity android:name=".Activities.PicaActivity" />
+        <activity android:name=".Activities.ListPicaActivity" />
+        <activity android:name=".Activities.ListApprove2Activity" />
+        <activity android:name=".Activities.ListApprovedActivity" />
+        <activity android:name=".Activities.ListApproved2Activity" />
+        <activity android:name=".Activities.ApproveActivity" />
+        <activity android:name=".Activities.LoginActivity" />
+        <activity android:name=".Activities.QuizActivity"/>
+        <activity android:name=".Activities.ResultActivity" />
+        <activity android:name=".Activities.ListHistoryActivity" />
+        <activity android:name=".Activities.HistoryActivity" />
+        <activity android:name=".Activities.KategoriHistoryActivity" />
+        <activity android:name=".Activities.ListPicaSpvActivity"/>
+        <activity android:name=".Activities.CompressActivity">
+
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".Activities.SubMenuActivity"/>
+        <!--<receiver android:name="com.wahana.wahanamarketingclub.activities.AlarmReceiver" />-->
+        <receiver android:name="com.wahanaartha.supervisionline.Activities.AlarmReceiver"></receiver>
+        <receiver android:name=".Utils.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

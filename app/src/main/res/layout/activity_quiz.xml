@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_100"
+    android:orientation="vertical"
+    tools:context="com.wahanaartha.supervisionline.Activities.QuizActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/textsize_medium"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eksterior"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_big"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/textsize_small"
+                android:text="Ketersediaan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_medium"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/textsize_medium"
+                android:layout_marginRight="@dimen/textsize_medium">
+
+                <RadioButton
+                    android:id="@+id/good"
+                    android:layout_width="@dimen/img_width_height"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:text="Exist, Good"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/not_exist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/img_width_height"
+                    android:layout_marginTop="@dimen/margin_top"
+                    android:gravity="right|center_vertical"
+                    android:text="Not exist"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/not_good"
+                    android:layout_width="@dimen/img_width_height"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/good"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="Exist, Not Good"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/na"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/img_width_height"
+                    android:layout_marginTop="@dimen/margin_top"
+                    android:gravity="center"
+                    android:text="N/A"
+                    android:visibility="gone" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/textsize_small"
+                android:text="Camera" />
+
+            <TextView
+                android:id="@+id/directori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/images"
+                android:layout_width="@dimen/img_width"
+                android:layout_height="@dimen/img_width"
+                android:layout_marginBottom="@dimen/textsize_small"
+                android:layout_marginLeft="@dimen/textsize_medium"
+                android:layout_marginRight="@dimen/textsize_medium" />
+
+            <EditText
+                android:id="@+id/notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dots_height"
+                android:layout_marginLeft="@dimen/textsize_medium"
+                android:layout_marginRight="@dimen/textsize_medium"
+                android:hint="Notes" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/textsize_medium"
+                android:layout_marginRight="@dimen/textsize_medium"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/prev_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorPrimary"
+                            app:srcCompat="@drawable/ic_chevron_left_white"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@id/next_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorPrimary"
+                            app:srcCompat="@drawable/ic_chevron_right_white"
+                            tools:ignore="RelativeOverlap" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

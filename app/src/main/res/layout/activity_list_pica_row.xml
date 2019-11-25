@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_lovsearch">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/approve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_bottom_cardview">
+
+        <RelativeLayout
+            android:id="@+id/relative_pica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_left">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/margin_right"
+                android:paddingLeft="@dimen/margin_left"
+                android:paddingRight="@dimen/margin_right"
+                android:paddingTop="@dimen/margin_bottom_cardview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_done"
+                        android:layout_width="@dimen/padding2"
+                        android:layout_height="@dimen/padding2"
+                        android:layout_marginLeft="@dimen/margin_bottom_cardview"
+                        android:background="@drawable/ic_checked"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_plan"
+                        android:layout_width="@dimen/padding2"
+                        android:layout_height="@dimen/padding2"
+                        android:layout_marginLeft="@dimen/margin_bottom_cardview"
+                        android:background="@drawable/ic_calendar"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_res"
+                        android:layout_width="@dimen/padding2"
+                        android:layout_height="@dimen/padding2"
+                        android:layout_marginLeft="@dimen/margin_bottom_cardview"
+                        android:background="@drawable/ic_time_passing"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:layout_marginRight="@dimen/margin_bottom_cardview"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_kategori"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/margin_bottom_cardview"
+                            android:text="Approval Layout New VinCi "
+                            android:textColor="@color/grey_700"
+                            android:textSize="@dimen/cp_textsize_small"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/text_question"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/cp_padding_alamat"
+                            android:text="Eksterior"
+                            android:textColor="@color/grey_700"
+                            android:textSize="@dimen/cp_textsize_little" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_status"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/statusTextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:minWidth="@dimen/min_width"
+                            android:text="Done"
+                            android:textColor="@color/green_500"
+                            android:textSize="@dimen/cp_textsize_little"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red_900"
+                            android:textSize="@dimen/tv_status" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

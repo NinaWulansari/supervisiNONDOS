@@ -1,0 +1,78 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!--customer prospect-->
+    <dimen name="cp_textsize_big">24sp</dimen>
+    <dimen name="cp_toolbar_text">22sp</dimen>
+    <dimen name="cp_textsize_medium">20sp</dimen>
+    <dimen name="cp_textsize_small">18sp</dimen>
+    <dimen name="cp_textsize_little">16sp</dimen>
+
+    <dimen name="cp_alp_size">40</dimen>
+    <dimen name="cp_padding_alamat">5dp</dimen>
+    <dimen name="cp_padding_lovsearch">4dp</dimen>
+    <dimen name="cp_padding_edittext">10dp</dimen>
+    <dimen name="cp_padding_tab_detail">13dp</dimen>
+    <dimen name="cp_margin_form">15dp</dimen>
+    <dimen name="cp_spinner_high">50dp</dimen>
+    <dimen name="cp_margin_top_edittext">5dp</dimen>
+    <dimen name="cp_width_0">0dp</dimen>
+    <dimen name="cp_relative_margin">20dp</dimen>
+    <dimen name="cp_index_corner">2</dimen>
+    <integer name="cp_index_textsizebar">16</integer>
+    <dimen name="margin_status">10dp</dimen>
+
+    <!--login-->
+    <dimen name="login_padding_linear">10dp</dimen>
+    <dimen name="login_margin_top">330dp</dimen>
+    <dimen name="login_margin_bottom">20dp</dimen>
+    <dimen name="login_width_image">400dp</dimen>
+    <dimen name="login_height_image">200dp</dimen>
+    <dimen name="login_padding_left">40dp</dimen>
+    <dimen name="login_padding_right">40dp</dimen>
+    <dimen name="login_margin_bottom_ediitext">15dp</dimen>
+    <dimen name="login_padding_edittext">10dp</dimen>
+    <dimen name="login_margin_top_botton">20dp</dimen>
+
+    <!--catalog-->
+    <dimen name="index">41sp</dimen>
+    <dimen name="tv_index_width">240dp</dimen>
+    <dimen name="tv_index_height">130dp</dimen>
+    <dimen name="margin_top_tv_index">30dp</dimen>
+    <dimen name="im_height_mtr_type">350dp</dimen>
+    <dimen name="tv_mtr_type">48sp</dimen>
+    <dimen name="tv_mtr_type_row">18sp</dimen>
+    <dimen name="tv_desc_motor">16sp</dimen>
+    <dimen name="tv_price_motor">15sp</dimen>
+    <dimen name="tv_read_more">16sp</dimen>
+    <dimen name="im_height_mtr_type_detail">140dp</dimen>
+    <dimen name="im_width_mtr_type_detail">180dp</dimen>
+    <dimen name="margin_top_ic_next">12dp</dimen>
+    <dimen name="tv_desc_motor_detail">18sp</dimen>
+    <dimen name="tv_price_motor_detail">16sp</dimen>
+    <dimen name="tv_available_color">16sp</dimen>
+    <dimen name="im_height">260dp</dimen>
+    <dimen name="im_height_detail">220dp</dimen>
+    <dimen name="im_width_detail">280dp</dimen>
+    <dimen name="tv_desc_price">17sp</dimen>
+    <dimen name="tv_title_about_us">26sp</dimen>
+
+    <!--activities-->
+
+    <dimen name="tv_subject">17sp</dimen>
+    <dimen name="tv_notes">17sp</dimen>
+    <dimen name="tv_tgl">17sp</dimen>
+    <dimen name="tv_salesman">17sp</dimen>
+    <dimen name="tv_content_type">19sp</dimen>
+
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_175">180dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_465">700dp</dimen>
+
+
+    <!--RATRI-->
+    <!--PICA-->
+</resources>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/approve_padding">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/textsize_medium"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_top_edittext"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/padding"
+                    android:background="@drawable/user" />
+
+                <TextView
+                    android:id="@+id/tv_sa_name"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Martinus"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_tgl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cp_padding_edittext"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/padding_alamat"
+                    android:gravity="center"
+                    android:text="30 Oktober 2018"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/tv_dealer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="@dimen/padding"
+                android:text="Wahana Makmur Sejati"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_medium" />
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding"
+                android:layout_marginLeft="40dp"
+                android:text="5 Need Approve"
+                android:textColor="@color/indigo_A700"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

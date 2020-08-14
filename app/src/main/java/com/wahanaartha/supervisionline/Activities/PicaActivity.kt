@@ -128,6 +128,7 @@ class PicaActivity : AppCompatActivity() {
                             .into(im_pica)
 
                     if (questionsModel?.statusPica.equals("Planned")) {
+                        sp_status_pica.visibility = View.GONE
                         sp_status_pica.setSelection((sp_status_pica.adapter as ArrayAdapter<String>).getPosition("Planned"))
                     } else if (questionsModel?.statusPica.equals("Done")) {
                         sp_status_pica.setSelection((sp_status_pica.adapter as ArrayAdapter<String>).getPosition("Done"))
@@ -222,7 +223,7 @@ class PicaActivity : AppCompatActivity() {
 
             val id = this.intent.getStringExtra(ID_PARENT)
 
-            if(sp_status_pica.equals("Planned")){
+            if(status_pica.equals("Planned")){
                 new_deadline = "0000-00-00"
             }
 
@@ -230,7 +231,7 @@ class PicaActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<AddPica>, response: Response<AddPica>) {
                     if (response.code() == 200) {
                         progressDialog.dismiss()
-                        Toast.makeText(this@PicaActivity, "Succes", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@PicaActivity, "Success", Toast.LENGTH_SHORT).show()
 
                         finish()
                     } else {

@@ -34,7 +34,7 @@ class HasilSupervisiFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        activity.title = "HASIL SUPERVISI"
+        activity.title = "PICA SUPERVISI"
         getData()
 
         swipeRefreshLayout.setOnRefreshListener { getData() }

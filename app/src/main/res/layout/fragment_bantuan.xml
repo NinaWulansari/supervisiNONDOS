@@ -1,18 +1,83 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="@dimen/cp_textsize_medium">
+
+    <ImageView
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        app:srcCompat="@drawable/ic_help"
+        android:layout_margin="@dimen/cp_textsize_medium"/>
 
     <TextView
-        android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="45dp"
-        android:text="Bantuan"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:text="Apakah Anda mengalami masalah dalam aplikasi ini?"
+        android:fontFamily="@font/product_sans"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/padding_alamat"/>
 
-</RelativeLayout>
+    <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:fontFamily="@font/product_sans"
+       android:text="Jika ada masalah terkait aplikasi ini, Anda dapat menghubungi kami"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/cp_textsize_medium"
+            android:layout_marginBottom="@dimen/cp_textsize_medium">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_phone"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="221 atau 222 atau 223"
+                android:fontFamily="@font/product_sans"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/cp_textsize_medium"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_outlook"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="helpdesk@wahanaartha.com"
+            android:fontFamily="@font/product_sans"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/cp_textsize_medium"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/cp_textsize_medium">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_pin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gedung Wahana Makmur Sejati Lt. 2"
+            android:fontFamily="@font/product_sans"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/cp_textsize_medium"/>
+    </LinearLayout>
+</LinearLayout>

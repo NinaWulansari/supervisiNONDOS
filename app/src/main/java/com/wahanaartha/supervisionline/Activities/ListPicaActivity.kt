@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.Toolbar
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import butterknife.ButterKnife
 import com.wahanaartha.supervisionline.Adapter.PicaIndexAdapter
@@ -75,11 +76,16 @@ class ListPicaActivity : AppCompatActivity() {
                 if (response.code() == 200) {
                     progressDialog.dismiss()
                     picaDatas = response.body()
-                    Log.i("Supervisi", "kategori: " + picaDatas!!)
-                    recyclerviewPica!!.setHasFixedSize(true)
-                    val mLayoutManager = LinearLayoutManager(applicationContext)
-                    recyclerviewPica!!.layoutManager = mLayoutManager
-                    recyclerviewPica!!.adapter = PicaIndexAdapter(picaDatas)
+                    if(picaDatas!!.size != 0){
+                        Log.i("Supervisi", "kategori: " + picaDatas!!)
+                        recyclerviewPica!!.setHasFixedSize(true)
+                        val mLayoutManager = LinearLayoutManager(applicationContext)
+                        recyclerviewPica!!.layoutManager = mLayoutManager
+                        recyclerviewPica!!.adapter = PicaIndexAdapter(picaDatas)
+                    }else{
+                        tv_no_data.visibility = View.VISIBLE
+                        recyclerviewPica.visibility = View.GONE
+                    }
                 } else {
                     Toast.makeText(this@ListPicaActivity, "Error", Toast.LENGTH_SHORT).show()
                 }

@@ -99,14 +99,14 @@ class KategoriActivity : AppCompatActivity() {
                     recycler_question!!.adapter = adapter
 
                     //ALERT DIALOG SUPERVISI DONE (ALL KATEGORI ANSWERED)
-                    if (db!!.notesCount == kategoriDatas.size) {
-                        val dialog = android.support.v7.app.AlertDialog.Builder(this@KategoriActivity)
-                        dialog.setMessage("Anda sudah menyelesaikan supervisi ini.")
-                                .setPositiveButton("OK", DialogInterface.OnClickListener { paramDialogInterface, paramInt ->
-                                    finish()
-                                })
-                        dialog.show()
-                    }
+//                    if (db!!.notesCount == kategoriDatas.size) {
+//                        val dialog = android.support.v7.app.AlertDialog.Builder(this@KategoriActivity)
+//                        dialog.setMessage("Anda sudah menyelesaikan supervisi ini.")
+//                                .setPositiveButton("OK", DialogInterface.OnClickListener { paramDialogInterface, paramInt ->
+//                                    finish()
+//                                })
+//                        dialog.show()
+//                    }
 
                     adapter.notifyDataSetChanged()
                     setDisable()

@@ -56,14 +56,14 @@
                 android:layout_marginTop="@dimen/cp_padding_lovsearch"
                 android:layout_height="wrap_content" />
 
-            <Spinner
-                android:id="@+id/spinnerTipe"
-                style="@style/Widget.AppCompat.Spinner.Underlined"
-                android:layout_width="@dimen/tv_index_width"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp" />
+<!--            <Spinner-->
+<!--                android:id="@+id/spinnerTipe"-->
+<!--                style="@style/Widget.AppCompat.Spinner.Underlined"-->
+<!--                android:layout_width="@dimen/tv_index_width"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:layout_marginTop="5dp" />-->
 
             <TextView
                 android:id="@+id/tv_tipe"

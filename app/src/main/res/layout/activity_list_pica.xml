@@ -22,6 +22,16 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone" />
 
+            <TextView
+                android:id="@+id/tv_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No data available"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/cp_textsize_medium"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:layout_gravity="center"/>
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerviewPica"
                 android:layout_width="match_parent"

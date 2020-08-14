@@ -327,17 +327,16 @@ class QuizActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
         progressDialog.setCancelable(false)
 
         val saveUser = Gson().fromJson<LoginUser>(this@QuizActivity.getSharedPreferences(LoginActivity.MY_LOGIN_PREF, android.content.Context.MODE_PRIVATE).getString(LoginActivity.MY_LOGIN_PREF_KEY, ""), LoginUser::class.java)
-
-        val file = FileUtils.getFile(this, file)
+        val file2 = FileUtils.getFile(this, file)
         try {
-            val bitmap = BitmapFactory.decodeFile(file.path)
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 17, FileOutputStream(file))
+            val bitmap = BitmapFactory.decodeFile(file2.path)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 17, FileOutputStream(file2))
         } catch (t: Throwable) {
             Log.e("ERROR", "Error compressing file." + t.toString())
             t.printStackTrace()
         }
-        val reqFile = RequestBody.create(MediaType.parse("image/*"), file)
-        val body = MultipartBody.Part.createFormData("pic", file.name, reqFile)
+        val reqFile = RequestBody.create(MediaType.parse("image/*"), file2)
+        val body = MultipartBody.Part.createFormData("pic", file2.name, reqFile)
 
         // add another part within the multipart request
         val pi = RequestBody.create(MediaType.parse("text/plain"), notes!!.text.toString())
@@ -360,9 +359,11 @@ class QuizActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
         API.addSupervisi(pi, main_item, item, latitude, longitude, noDlr, jawaban, create_by, status_pi, tipe, nama_dlr, body).enqueue(object : Callback<InsertSupervisi> {
             override fun onResponse(call: Call<InsertSupervisi>, response: Response<InsertSupervisi>) {
                 if (response.code() == 200) {
+                    remark = null
+                    file = null
                     Log.i(TAG, "INSERT : " + response.body())
                     progressDialog.dismiss()
-                    val fdelete = File(file!!.path)
+                    val fdelete = File(file2.path)
                     if (fdelete.exists()) {
                         if (fdelete.delete()) {
                             Log.i("image", "delete succsess: ")
@@ -379,7 +380,6 @@ class QuizActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
                         radio_group.clearCheck()
                         images.setImageResource(android.R.color.transparent)
                         notes.text.clear()
-                        remark = null
                     }
                 } else {
                     progressDialog.dismiss()
@@ -407,16 +407,16 @@ class QuizActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
 
         val saveUser = Gson().fromJson<LoginUser>(this@QuizActivity.getSharedPreferences(LoginActivity.MY_LOGIN_PREF, android.content.Context.MODE_PRIVATE).getString(LoginActivity.MY_LOGIN_PREF_KEY, ""), LoginUser::class.java)
 
-        val file = FileUtils.getFile(this, file)
+        val file2 = FileUtils.getFile(this, file)
         try {
-            val bitmap = BitmapFactory.decodeFile(file.path)
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 17, FileOutputStream(file))
+            val bitmap = BitmapFactory.decodeFile(file2.path)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 17, FileOutputStream(file2))
         } catch (t: Throwable) {
             Log.e("ERROR", "Error compressing file." + t.toString())
             t.printStackTrace()
         }
-        val reqFile = RequestBody.create(MediaType.parse("image/*"), file)
-        val body = MultipartBody.Part.createFormData("pic", file.name, reqFile)
+        val reqFile = RequestBody.create(MediaType.parse("image/*"), file2)
+        val body = MultipartBody.Part.createFormData("pic", file2.name, reqFile)
 
         // add another part within the multipart request
         val pi = RequestBody.create(MediaType.parse("text/plain"), notes!!.text.toString())
@@ -441,7 +441,7 @@ class QuizActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, G
                 if (response.code() == 200) {
                     Log.i(TAG, "INSERT : " + response.body())
                     progressDialog.dismiss()
-                    val fdelete = File(file!!.path)
+                    val fdelete = File(file2.path)
                     if (fdelete.exists()) {
                         if (fdelete.delete()) {
                             Log.i("image", "delete succsess: ")

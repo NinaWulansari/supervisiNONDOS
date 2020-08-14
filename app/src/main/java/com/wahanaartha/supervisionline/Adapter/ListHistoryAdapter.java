@@ -33,7 +33,6 @@ public class ListHistoryAdapter extends RecyclerView.Adapter<ListHistoryAdapter.
         HistoryIndex historyIndex = dataSet.get(position);
         holder.dealer.setText(historyIndex.getNamaDlr());
         holder.tgl_supervisi.setText(historyIndex.getTglSupervisi());
-        holder.type.setText(historyIndex.getType());
     }
 
     @Override
@@ -52,7 +51,6 @@ public class ListHistoryAdapter extends RecyclerView.Adapter<ListHistoryAdapter.
         public HistoryViewHolder(View itemView) {
             super(itemView);
             st_supervisi = itemView.findViewById(R.id.approve);
-            type = itemView.findViewById(R.id.type);
             tgl_supervisi = itemView.findViewById(R.id.tgl_supervisi);
             dealer = itemView.findViewById(R.id.nama_dealer);
         }

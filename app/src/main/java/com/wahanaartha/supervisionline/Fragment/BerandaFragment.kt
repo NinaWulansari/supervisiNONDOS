@@ -63,34 +63,36 @@ class BerandaFragment : Fragment() {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         activity!!.title = "Beranda"
-        val spinnerArray = ArrayList<String>()
+//        val spinnerArray = ArrayList<String>()
         val date = getCurrentDateTime()
         val tgl_supervisi = date.toString("yyyy/MM/dd")
 
         helper = myDbAdapter(activity)
         helper!!.deleteKategori()
 
-        var savedUser = Gson()
-                .fromJson(activity?.getSharedPreferences(MY_LOGIN_PREF, Context.MODE_PRIVATE)?.getString(MY_LOGIN_PREF_KEY, ""), LoginUser::class.java)
+//        var savedUser = Gson()
+//                .fromJson(activity?.getSharedPreferences(MY_LOGIN_PREF, Context.MODE_PRIVATE)?.getString(MY_LOGIN_PREF_KEY, ""), LoginUser::class.java)
+//
+//        if(savedUser.groupId.equals("1")){
+//            spinnerArray.add("DOS")
+//        } else{
+//            spinnerArray.add("NON DOS")
+//        }
 
-        if(savedUser.groupId.equals("1")){
-            spinnerArray.add("DOS")
-        } else{
-            spinnerArray.add("NON DOS")
-        }
+//        val adapter = ArrayAdapter(activity,
+//                android.R.layout.simple_spinner_item, spinnerArray)
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+//        spinnerTipe!!.adapter = adapter
+//        spinnerTipe!!.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+//            override fun onItemSelected(adapterView: AdapterView<*>, view: View, position: Int, id: Long) {
+//                typeSupervisi = spinnerTipe!!.selectedItem.toString()
+//            }
+//
+//            override fun onNothingSelected(parent: AdapterView<*>) {
+//            }
+//        }
 
-        val adapter = ArrayAdapter(activity,
-                android.R.layout.simple_spinner_item, spinnerArray)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerTipe!!.adapter = adapter
-        spinnerTipe!!.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(adapterView: AdapterView<*>, view: View, position: Int, id: Long) {
-                typeSupervisi = spinnerTipe!!.selectedItem.toString()
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>) {
-            }
-        }
+        typeSupervisi = "NON DOS"
 
         getNamaUser()
         getDealer({})
